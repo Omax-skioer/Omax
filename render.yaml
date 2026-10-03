@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: omax-whatsapp-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: BOT_NAME
+        value: Omax
+      - key: PREFIX
+        value: .
+      - key: OWNER_NAME
+        value: Shehara Kavindha
+      - key: OWNER_NUMBER
+        value: "94775113277"
+      - key: PAIRING_NUMBER
+        value: "94775113277"
+      - key: AUTO_REPLY
+        value: "true"
+      - key: AUTH_DIR
+        value: ./auth
